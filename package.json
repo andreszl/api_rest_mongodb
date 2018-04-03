@@ -1,7 +1,7 @@
 {
   "name": "api_crud_mysql",
   "version": "1.0.0",
-  "description": "API REST MVC con MYSQL en NodeJS y Express",
+  "description": "API REST MVC con MONGODB en NodeJS y Express",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
