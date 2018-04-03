@@ -1,0 +1,32 @@
+{
+  "name": "api_crud_mysql",
+  "version": "1.0.0",
+  "description": "API REST MVC con MYSQL en NodeJS y Express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [
+    "API",
+    "CRUD",
+    "MVC",
+    "REST",
+    "MYSQL",
+    "NODEJS",
+    "EXPRESS"
+  ],
+  "author": "Andreszl",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "express-method-override": "0.0.3",
+    "jade": "^1.11.0",
+    "mongoose": "^4.11.12",
+    "morgan": "^1.8.2",
+    "mysql": "^2.14.1",
+    "nodemon": "^1.12.1",
+    "serve-favicon": "^2.4.4"
+  }
+}

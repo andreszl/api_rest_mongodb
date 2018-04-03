@@ -1,0 +1,32 @@
+extends layout
+
+block content
+	div.container
+
+		form(method='post', action='/update')
+
+			div.container.form-control
+				
+				div
+					label(for='movie_id') IMDB ID: #{data.movie_id}
+					input(type='hidden', name='movie_id', value='#{data.movie_id}', required) 	 
+				
+				div
+					label(for='title') Title: 
+					input(type='text', name='title', value='#{data.title}', required) 	 
+				
+				div
+					label(for='release_year') Release: 
+					input(type='text', name='release_year', value='#{data.release_year}', required) 	 
+				
+				div
+					label(for='rating') Rating: 
+					input(type='text', name='rating', value='#{data.rating}', required) 	 
+				
+				div
+					label(for='poster') Poster: 
+					input(type='text', name='poster', value='#{data.image}', required) 	 
+				
+				div.form-control 
+					button.btn(type='submit') Save Movie
+				input(type="hidden", name='_method', value='PUT')

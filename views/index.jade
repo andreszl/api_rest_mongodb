@@ -1,0 +1,30 @@
+extends layout
+
+block content
+		article.item
+			if (data.length)
+			
+			div.container
+				a.btn(href='/create') New Movie
+				
+			each movie in data 
+				div.container
+					.img-movie
+						p #{movie.title}
+						img(src='#{movie.image}', width='100')
+					
+					.options
+						.option release: #{movie.release_year} |
+						.option rating #{movie.rating} |
+						.option
+							form(method='GET', action='edit/#{movie.movie_id}')
+								button.btn-link(type='submit') EDIT
+						.option |
+
+						.option
+							form(method='post', action='/delete/#{movie.movie_id}')
+								button.btn-link(type='submit' onClick="confirm('Deseas eliminar la pelicula?')") DELETE
+								input(type="hidden", name='_method', value='DELETE')
+
+			else 
+				p.error No existen peliculas
